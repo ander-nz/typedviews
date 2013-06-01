@@ -80,8 +80,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypedController.cs" />
     <Compile Include="TypedLayoutPage.cs" />
+    <Compile Include="TypedViewPage`2.cs" />
     <Compile Include="TypedViewPage`1.cs" />
-    <Compile Include="TypedViewPage`0.cs" />
     <Compile Include="_Annotations.cs" />
   </ItemGroup>
   <ItemGroup>
