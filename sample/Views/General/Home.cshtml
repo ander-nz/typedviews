@@ -1,0 +1,12 @@
+﻿@using Arraybracket.TypedViews.Sample.Views.General
+@model HomeViewModel
+
+@this.SetLayout("/Views/Shared/Layout.cshtml", new LayoutModel {
+	Title = null,
+	NavSelection = LayoutNavSelection.Home,
+})
+
+<p class="appbody-info">Welcome to Typed Views Sample. Observe that this page is rendered using the strongly-typed <i>ViewModel</i> property instead of the dynamic <i>ViewBag</i> property. When Arraybracket.TypedViews is enabled, you use the <i>@@model</i> declaration to specify the ViewModel type. Visit the Support page for an example of a page with that uses the <i>Model</i> property as well.</p>
+
+<h3 class="appbody-heading">Featured Product: @ViewModel.FeaturedTitle</h3>
+<p class="appbody-info">@ViewModel.FeaturedDescription</p>

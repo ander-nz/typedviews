@@ -1,0 +1,40 @@
+﻿@inherits TypedLayoutPage<LayoutModel>
+
+@helper HeaderLink(LayoutNavSelection navSelection, string url, string text) {
+	<a class="appheader-link @(LayoutModel.NavSelection == navSelection ? "selected" : "")" href="@url">@text</a>	
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		@if (LayoutModel.Title != null) {
+			<title>@LayoutModel.Title - Typed Views Sample</title>
+		} else {
+			<title>Typed Views Sample</title>
+		}
+		<link rel="stylesheet" type="text/css" href="~/Styles/site.less" />
+	</head>
+	<body>
+		<div class="appheader">
+			<div class="appheader-inner">
+				<h1 class="appheader-logo">Typed Views Sample</h1>
+				<div class="appheader-menu">
+					@this.HeaderLink(LayoutNavSelection.Home, Url.Action("Home", "General"), "Home")
+					@this.HeaderLink(LayoutNavSelection.About, Url.Action("About", "General"), "About")
+					@this.HeaderLink(LayoutNavSelection.Support, Url.Action("Support", "General"), "Support")
+				</div>
+			</div>
+		</div>
+		
+		<div class="appbody">
+			<div class="appbody-inner">
+				@if (LayoutModel.Title != null) {
+					<h2 class="appbody-title">@LayoutModel.Title</h2>
+				}
+				
+				@this.RenderBody()
+			</div>
+		</div>
+	</body>
+</html>

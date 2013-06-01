@@ -1,0 +1,9 @@
+﻿@using Arraybracket.TypedViews.Sample.Views.General
+@model SupportPostedViewModel
+
+@this.SetLayout("/Views/Shared/Layout.cshtml", new LayoutModel {
+	Title = "Support Request Sent",
+	NavSelection = LayoutNavSelection.Support,
+})
+
+<p class="appbody-info">Thanks! Your support email will be processed.</p>

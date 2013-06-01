@@ -1,0 +1,170 @@
+﻿@color-accent: #ff8f32;
+@font-small: 14px;
+@font-medium: 17px;
+@font-large: 20px;
+@padding: 14px;
+@padding-half: @padding / 2;
+
+@appheader-height: @font-large + @padding * 2;
+@layout-width: 960px;
+@label-width: 80px;
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	font: inherit;
+	color: inherit;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: @font-small "Segoe UI", sans-serif;
+	line-height: 1;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+.appheader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: @appheader-height;
+
+	background: @color-accent;
+	color: white;
+	font-size: @font-large;
+
+	&-inner {
+		margin: 0 auto;
+		width: @layout-width;
+	}
+
+	&-logo {
+		float: left;
+		padding: @padding;
+	}
+
+	&-menu {
+		float: right;
+	}
+
+	&-link {
+		float: left;
+		padding: @padding;
+		outline: none;
+
+		&:hover, &:focus {
+			background: mix(white, @color-accent, 20%);
+		}
+
+		&.selected {
+			background: white;
+			color: @color-accent;
+
+			&:hover, &:focus {
+				color: mix(black, @color-accent, 20%);
+			}
+		}
+	}
+}
+
+.appbody {
+	margin-top: @appheader-height;
+
+	&-inner {
+		margin: 0 auto;
+		width: @layout-width;
+		padding: @padding-half @padding;
+	}
+
+	&-title {
+		font-size: @font-large;
+		padding: @padding-half 0;
+	}
+
+	&-heading {
+		font-size: @font-medium;
+		padding: @padding-half 0;
+	}
+
+	&-info {
+		padding: (@padding-half - 2px) 0;
+		line-height: @font-small + 4px;
+	}
+}
+
+.field {
+	overflow: hidden;
+	padding: @padding-half 0;
+
+	&-label {
+		float: left;
+		line-height: @font-small + @padding;
+		width: @label-width;
+	}
+
+	&-value {
+		float: left;
+	}
+
+	&-error {
+		margin-left: @padding-half;
+		float: left;
+		line-height: @font-small + @padding;
+		color: red;
+	}
+}
+
+.textbox, .listbox {
+	border: solid 1px #aaa;
+	border-radius: 4px;
+	height: @font-small + @padding;
+	padding: 0 (@padding-half - 1px);
+
+	&:hover {
+		border-color: #888;
+	}
+
+	&:focus {
+		border-color: #333;
+	}
+
+	&.multiline {
+		padding-top: @padding-half - 3px;
+		padding-bottom: @padding-half - 3px;
+		line-height: @font-small + 4px;
+		width: 300px;
+		height: 60px;
+	}
+}
+
+.buttonstrip {
+	padding: @padding-half 0;
+	overflow: hidden;
+
+	&-primary {
+		float: left;
+		background: @color-accent;
+		border-radius: 4px;
+		color: white;
+		padding: @padding-half;
+		cursor: pointer;
+		outline: none;
+
+		&:hover, &:focus {
+			background: mix(white, @color-accent, 20%);
+		}
+	}
+}

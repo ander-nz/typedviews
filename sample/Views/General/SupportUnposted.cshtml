@@ -1,0 +1,31 @@
+﻿@using Arraybracket.TypedViews.Sample.Views.General
+@model SupportUnpostedViewModel, SupportModel
+
+@this.SetLayout("/Views/Shared/Layout.cshtml", new LayoutModel {
+	Title = "Send a Support Request",
+	NavSelection = LayoutNavSelection.Support,
+})
+
+@using (Html.BeginForm()) {
+	<div class="field">
+		<label class="field-label" for="@Html.IdFor(m => m.From)">Your name:</label>
+		@Html.TextBoxFor(m => m.From, new { @class = "field-value textbox medium" })
+		@Html.ValidationMessageFor(m => m.From, null, new { @class = "field-error" })
+	</div>
+	
+	<div class="field">
+		<label class="field-label" for="@Html.IdFor(m => m.Recipient)">Recipient:</label>
+		@Html.DropDownListFor(m => m.Recipient, new SelectList(ViewModel.RecipientOptions, "Id", "Description", Html.ValueFor(m => m.Recipient)), "-- Select a Recipient --", new { @class = "field-value listbox" })
+		@Html.ValidationMessageFor(m => m.Recipient, null, new { @class = "field-error" })
+	</div>
+	
+	<div class="field">
+		<label class="field-label" for="@Html.IdFor(m => m.Message)">Message:</label>
+		@Html.TextAreaFor(m => m.Message, new { @class = "field-value textbox multiline" })
+		@Html.ValidationMessageFor(m => m.Message, null, new { @class = "field-error" })
+	</div>
+	
+	<div class="buttonstrip">
+		<button type="submit" class="buttonstrip-primary">Send</button>
+	</div>
+}

@@ -1,0 +1,11 @@
+﻿@using Arraybracket.TypedViews.Sample.Views.General
+@model AboutViewModel
+
+@this.SetLayout("/Views/Shared/Layout.cshtml", new LayoutModel {
+	Title = "About",
+	NavSelection = LayoutNavSelection.About,
+})
+
+<p class="appbody-info">Arraybracket.TypedViews helps enforce a strongly-typed replacement to <i>ViewBag</i>/<i>ViewData</i>/<i>Page</i>. Once you derive your controllers from <i>TypedController</i> and make the appropriate changes to <b>web.config</b>, you will have access to the <i>ViewModel</i> property from within your view.</p>
+
+<p class="appbody-info">Instead of setting the <i>Layout</i> property within the view, you should call <i>SetLayout</i>, which allows you to pass a layout model to the layout. The layout can access the strongly-typed <i>LayoutModel</i> property in a similar manner.</p>
