@@ -4,7 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D370A3F-0574-40D9-AF3C-5A0C382BC12F}"
 	ProjectSection(SolutionItems) = preProject
 		arraybracket.snk = arraybracket.snk
+		install.ps1 = install.ps1
 		LICENSE.md = LICENSE.md
+		README.md = README.md
+		typedviews.nuspec = typedviews.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arraybracket.TypedViews", "src\Arraybracket.TypedViews.csproj", "{405C1905-E2CB-4375-86AE-707C3CD72B70}"

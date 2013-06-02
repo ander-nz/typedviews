@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>Arraybracket.TypedViews</id>
+		<version>1.0.0</version>
+		<authors>Shane S. Anderson</authors>
+		
+		<summary>A strongly-typed replacement for ViewBag in MVC/Razor views.</summary>
+		<description>Typed views allow MVC/Razor views to specify a strongly-typed ViewModel property, separate to the Model property.</description>
+		<tags>aspnet asp.net aspnetmvc mvc razor viewbag viewmodel typed</tags>
+
+		<licenseUrl>https://github.com/arraybracket/typedviews/blob/v1.0.0/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/arraybracket/typedviews</projectUrl>
+		<copyright>Copyright &#169;2013 Arraybracket Limited</copyright>
+		
+		<dependencies>
+			<dependency id="Microsoft.AspNet.Mvc" version="4.0.0.0" />
+		</dependencies>
+	</metadata>
+
+	<files>
+		<file src="src\bin\Release\Arraybracket.TypedViews.dll" target="lib\net40" />
+		<file src="install.ps1" target="tools\net40" />
+		<file src="uninstall.ps1" target="tools\net40" />
+	</files>
+</package>
